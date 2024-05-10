@@ -2,10 +2,10 @@ import "./OtpScreen.css";
 import React, { useState, useEffect, useRef } from 'react';
 
 function OtpScreen() {
-    const [otp, setOtp] = useState(['', '', '', '', '']); // Array to store OTP digits
-    const otpInputRefs = useRef([]); // Refs for OTP input fields
+    const [otp, setOtp] = useState(['', '', '', '', '']);
+    const otpInputRefs = useRef([]);
     const [timer, setTimer] = useState(180);
-    const [timerExpired, setTimerExpired] = useState(false); // State to track if timer has expired
+    const [timerExpired, setTimerExpired] = useState(false);
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -13,8 +13,8 @@ function OtpScreen() {
                 if (prevTimer > 0) {
                     return prevTimer - 1;
                 } else {
-                    clearInterval(interval); // Clear the interval when timer reaches 0
-                    setTimerExpired(true); // Set timerExpired to true when timer reaches 0
+                    clearInterval(interval);
+                    setTimerExpired(true);
                     return 0;
                 }
             });
@@ -24,7 +24,6 @@ function OtpScreen() {
     }, []);
 
     useEffect(() => {
-        // Focus the first OTP input field when the component mounts
         if (otpInputRefs.current[0]) {
             otpInputRefs.current[0].focus();
         }
@@ -40,8 +39,7 @@ function OtpScreen() {
         const updatedOtp = [...otp];
         updatedOtp[index] = event.target.value;
         setOtp(updatedOtp);
-    
-        // Move to the next input field if available
+
         if (event.target.value !== '' && index < otp.length - 1 && otpInputRefs.current[index + 1]) {
             otpInputRefs.current[index + 1].focus();
         }
@@ -49,7 +47,6 @@ function OtpScreen() {
 
     const handleKeyDown = (index, event) => {
         if (event.key === "Backspace" && index > 0 && !otp[index] && otpInputRefs.current[index - 1]) {
-            // Move focus to the previous input field on backspace
             const previousInput = otpInputRefs.current[index - 1];
             previousInput.focus();
         }
@@ -74,7 +71,7 @@ function OtpScreen() {
                                 onChange={(event) => handleInputChange(index, event)}
                                 onKeyDown={(event) => handleKeyDown(index, event)}
                                 maxLength={1}
-                                autoFocus={index === 0} // Focus the first input field initially
+                                autoFocus={index === 0}
                                 className="otp-input"
                             />
                         ))}
