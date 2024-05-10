@@ -4,6 +4,8 @@ import "./Login.css";
 import Logo from "../../assets/logo.png";
 import ForgetPassword from "../ForgetPassword/ForgetPassword";
 import ForgetPwd from "../ForgetPassword/ForgetPassword";
+import OtpScreen from "../OtpScreen/OtpScreen";
+
 
 const Login = () => {
   const [moveLeft, setMoveLeft] = useState(false);
@@ -61,7 +63,7 @@ const Login = () => {
         </div>
         <div className={moveLeft ? "card-2" : "card-3"}>
           <Cards>
-            <h1>OTP Screen</h1>
+            <OtpScreen></OtpScreen>
           </Cards>
         </div>
       </div>
