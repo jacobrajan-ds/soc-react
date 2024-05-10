@@ -1,0 +1,10 @@
+.card-container {
+  width: 600px;
+  height: 600px;
+  background: linear-gradient(to bottom, #0c2539, #050c1d);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 20px 30px 80px rgba(0, 0, 0, 0.5);
+}

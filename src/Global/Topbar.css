@@ -1,0 +1,38 @@
+.topbar-container {
+  width: 100%;
+  background-color: #131b2f;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  height: 100px;
+  border-radius: 12px;
+  margin: 8px 12px;
+}
+
+.icon-container {
+  width: 42px;
+  height: 42px;
+  padding: 10px;
+  background-color: #071026;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-group {
+  display: flex;
+  gap: 8px;
+}
+
+.topbar-icon {
+  width: 24px;
+  height: 24;
+  color: #00f6ff;
+}
+
+.tenant-name {
+  font-size: 20px;
+  font-weight: 600;
+  color: #e3e8f3;
+  margin-left: 40px;
+}

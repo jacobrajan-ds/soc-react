@@ -1,0 +1,13 @@
+.dashboard-layout {
+  display: flex;
+  background-color: #071026;
+  height: 100vh;
+}
+
+.dashboard-right {
+  width: 80%;
+}
+
+/* .linechart {
+  padding: 80px;
+} */
