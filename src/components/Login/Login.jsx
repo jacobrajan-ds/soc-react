@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import Cards from "../../shared/Card/Cards";
 import "./Login.css";
 import Logo from "../../assets/logo.png";
+import ForgetPassword from "../ForgetPassword/ForgetPassword";
+import ForgetPwd from "../ForgetPassword/ForgetPassword";
 
 const Login = () => {
   const [moveLeft, setMoveLeft] = useState(false);
@@ -15,7 +17,9 @@ const Login = () => {
       <div className="card-box">
         <div className={moveRight ? "card-1" : "card-2"}>
           <Cards>
-            <h1>Forget Password</h1>
+            <ForgetPwd></ForgetPwd>
+            {/* <h1>Forget Password</h1>
+            <ForgetPassword></ForgetPassword> */}
           </Cards>
         </div>
         <div className={moveLeft ? "card-3" : moveRight ? "card-2" : "card-1"}>

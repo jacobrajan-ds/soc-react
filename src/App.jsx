@@ -3,7 +3,7 @@ import Login from "./components/Login/Login";
 import Dashboard from "./pages/Dashboard";
 
 function App() {
-  return <Dashboard />;
+  return <Login />;
 
   // <Login />;
 }
