@@ -1,0 +1,23 @@
+.ant-table-thead {
+  th.ant-table-cell-resizable {
+    position: relative;
+    overflow: visible;
+    background-color: #f0f2f5;
+  }
+
+  th.ant-table-cell-resizable:hover .ant-table-column-resize {
+    display: block;
+  }
+}
+
+.ant-table-column-resize {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 6px;
+  height: 100%;
+  cursor: col-resize;
+  display: none;
+  background: #fff;
+  z-index: 1;
+}

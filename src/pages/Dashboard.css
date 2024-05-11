@@ -7,7 +7,7 @@
 .dashboard-right {
   width: 80%;
 }
-
-/* .linechart {
-  padding: 80px;
-} */
+.linechart {
+  padding: 30px;
+  height: 800px;
+}

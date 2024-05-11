@@ -162,7 +162,7 @@ const Sidebar = () => {
               </li>
             </ul>
           </li>
-          <li>
+          {/* <li>
             <div className="profile-details">
               <div className="profile-content">
                 <img src="image/profile.jpg" alt="profileImg" />
@@ -173,7 +173,7 @@ const Sidebar = () => {
               </div>
               <i className="bx bx-log-out"></i>
             </div>
-          </li>
+          </li> */}
         </ul>
       </div>
     </div>
